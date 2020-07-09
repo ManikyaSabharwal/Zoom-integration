@@ -1,0 +1,17 @@
+{
+  "name": "zoom-test",
+  "version": "1.0.0",
+  "description": "zoom integrated in the node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"http-server -a 0.0.0.0 -p 9999 -c-1 -o index.html\"",
+    "https": "concurrently \"http-server -a 0.0.0.0 -p 9999 -c-1 -S -C localhost.crt -K localhost.key -o https://localhost:9999/index.html\""
+  },
+  "author": "Manikya Sabharwal",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "http-server": "^0.12.3"
+  }
+}
